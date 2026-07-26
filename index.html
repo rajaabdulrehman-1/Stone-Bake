@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stone Bake Pizza — Menu</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=JetBrains+Mono:wght@500;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="embers"></canvas>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="brand-mark display"><span class="flame-icon">🔥</span> STONE BAKE<br>PIZZA</div>
+  <div class="tagline">Taste of Fire</div>
+  <p class="hero-sub">Hand-stretched dough, stone-baked at high heat, and topped the way your street corner deserves. Browse the full menu below — tap any item to see it open up.</p>
+  <div class="hero-meta">
+    <span class="pill">🕙 <b>10:00 AM – 1:00 AM</b> daily</span>
+    <span class="pill">🛵 <b>Free</b> home delivery</span>
+    <span class="pill">🍽️ Dine-in &amp; takeaway</span>
+  </div>
+  <div class="scroll-cue">↓ scroll the menu ↓</div>
+</section>
+
+<!-- STICKY CATEGORY NAV -->
+<nav class="board-nav">
+  <div class="board-nav-inner" id="catNav">
+    <button class="cat-btn active" data-target="regular">Pizza Regular</button>
+    <button class="cat-btn" data-target="global">Pizza Global</button>
+    <button class="cat-btn" data-target="sandwich">Sandwiches</button>
+    <button class="cat-btn" data-target="rolls">Rolls</button>
+    <button class="cat-btn" data-target="pasta">Pastas</button>
+    <button class="cat-btn" data-target="wings">Wings &amp; Nuggets</button>
+    <button class="cat-btn" data-target="burgers">Burgers</button>
+    <button class="cat-btn" data-target="appetizers">Appetizers</button>
+    <button class="cat-btn" data-target="deals">Deals</button>
+  </div>
+</nav>
+
+<div class="menu-wrap">
+
+  <!-- PIZZA REGULAR -->
+  <section class="section" id="regular">
+    <div class="section-head">
+      <span class="section-num mono">01</span>
+      <h2 class="section-title display">Pizza <span>Regular Favourites</span></h2>
+    </div>
+    <p class="section-note">Sizes: Small (8") · Medium (11") · Large (13") · XL (16")</p>
+    <div class="grid" id="grid-regular"></div>
+  </section>
+
+  <!-- PIZZA GLOBAL -->
+  <section class="section" id="global">
+    <div class="section-head">
+      <span class="section-num mono">02</span>
+      <h2 class="section-title display">Pizza <span>Global Special</span></h2>
+    </div>
+    <p class="section-note">Our signature stone-baked creations.</p>
+    <div class="grid" id="grid-global"></div>
+  </section>
+
+  <!-- SANDWICHES -->
+  <section class="section" id="sandwich">
+    <div class="section-head">
+      <span class="section-num mono">03</span>
+      <h2 class="section-title display">Sand<span>wiches</span></h2>
+    </div>
+    <div class="grid" id="grid-sandwich"></div>
+  </section>
+
+  <!-- ROLLS -->
+  <section class="section" id="rolls">
+    <div class="section-head">
+      <span class="section-num mono">04</span>
+      <h2 class="section-title display">Rolls <span>&amp; Wraps</span></h2>
+    </div>
+    <div class="grid" id="grid-rolls"></div>
+  </section>
+
+  <!-- PASTA -->
+  <section class="section" id="pasta">
+    <div class="section-head">
+      <span class="section-num mono">05</span>
+      <h2 class="section-title display">Pasta<span>s</span></h2>
+    </div>
+    <div class="grid" id="grid-pasta"></div>
+  </section>
+
+  <!-- WINGS -->
+  <section class="section" id="wings">
+    <div class="section-head">
+      <span class="section-num mono">06</span>
+      <h2 class="section-title display">Wings <span>&amp; Nuggets</span></h2>
+    </div>
+    <p class="section-note">Priced per 6pc / 12pc unless noted.</p>
+    <div class="grid" id="grid-wings"></div>
+  </section>
+
+  <!-- BURGERS -->
+  <section class="section" id="burgers">
+    <div class="section-head">
+      <span class="section-num mono">07</span>
+      <h2 class="section-title display">Burg<span>ers</span></h2>
+    </div>
+    <div class="grid" id="grid-burgers"></div>
+  </section>
+
+  <!-- APPETIZERS -->
+  <section class="section" id="appetizers">
+    <div class="section-head">
+      <span class="section-num mono">08</span>
+      <h2 class="section-title display">Appet<span>izers</span></h2>
+    </div>
+    <p class="section-note">Regular / Large where noted.</p>
+    <div class="grid" id="grid-appetizers"></div>
+    <div class="topping-bar" id="toppingBar"></div>
+  </section>
+
+  <!-- DEALS -->
+  <section class="section" id="deals">
+    <div class="section-head">
+      <span class="section-num mono">09</span>
+      <h2 class="section-title display">Combo <span>Deals</span></h2>
+    </div>
+    <p class="section-note">Bundled deals, best value for groups &amp; late nights.</p>
+    <div class="grid" id="grid-deals"></div>
+  </section>
+
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <h3 class="footer-title display">Follow the <span>fire</span></h3>
+  <p class="footer-sub">Find us, follow us, and get your order in — home delivery is on us.</p>
+
+  <div class="order-cta">
+    <a class="btn btn-primary" href="https://wa.me/923104720333" target="_blank" rel="noopener">💬 Order on WhatsApp</a>
+    <a class="btn btn-ghost" href="tel:03032700333">📞 Call to Order</a>
+  </div>
+
+  <div class="social-row">
+    <!-- Add your live links in each href below -->
+    <a class="social" href="#" target="_blank" rel="noopener" aria-label="Facebook">📘</a>
+    <a class="social" href="#" target="_blank" rel="noopener" aria-label="Instagram">📷</a>
+    <a class="social" href="#" target="_blank" rel="noopener" aria-label="TikTok">🎵</a>
+    <a class="social" href="https://wa.me/923104720333" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+  </div>
+
+  <div class="footer-info">
+    <div><b>Location</b>Near Best Group of College, Bembhar Road, Kotla Arab Ali Khan</div>
+    <div><b>Order</b>0310-4720333 · 0303-2700333</div>
+    <div><b>Hours</b>10:00 AM – 1:00 AM, daily</div>
+  </div>
+
+  <p class="footer-copy">© Stone Bake Pizza — Taste of Fire. Scan. Browse. Order.</p>
+</footer>
+
+<a class="fab" href="https://wa.me/923104720333" target="_blank" rel="noopener" aria-label="Order on WhatsApp">💬</a>
+
+<script src="script.js"></script>
+</body>
+    </html>
+    
